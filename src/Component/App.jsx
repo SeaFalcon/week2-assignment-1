@@ -7,19 +7,14 @@ export default function App() {
 
   const { count } = state;
 
-  function handleClickButton() {
-    setState({ count: count + 1 });
-  }
-
-  function handleClickNumber(number) {
-    setState({ count: count + number });
+  function handleClick(increment) {
+    setState({ count: count + increment });
   }
 
   return (
     <Page
       count={count}
-      handleClickButton={handleClickButton}
-      handleClickNumber={handleClickNumber}
+      onClick={handleClick}
     />
   );
 }
